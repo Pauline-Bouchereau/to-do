@@ -1,1 +1,251 @@
-/* Other rules */
+/* ----------------- */
+/* Global rules */
+/* ----------------- */
+:root {
+  --purple: #5c48d3;
+  --light-grey: #f5f4f4;
+  --dark-grey: #2d2f30;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", Georgia, "Times New Roman", Times, serif;
+}
+
+body .dark-mode {
+  background-color: var(--dark-grey);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* ----------------- */
+/* Header */
+/* ----------------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 40px;
+  border-bottom: solid 1px var(--purple);
+}
+
+header > div {
+  display: flex;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.list-icon {
+  font-size: 60px;
+  color: var(--purple);
+  margin-right: 40px;
+}
+
+header button {
+  color: white;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 5px;
+  width: 160px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+/* Header in dark mode */
+
+.dark-mode header {
+  border-bottom: solid 1px white;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+.dark-mode .list-icon {
+  color: white;
+}
+
+/* ----------------- */
+/* Main */
+/* ----------------- */
+
+main {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Task */
+.task {
+  background-color: var(--light-grey);
+  height: 30px;
+  width: 380px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task p {
+  font-size: 18px;
+  width: 300px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.task p::-webkit-scrollbar {
+  display: none;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.two-columns .task:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.task > div {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task > span {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+/* Task on dark mode */
+.dark-mode .task {
+  background-color: var(--purple);
+}
+
+.dark-mode .task p {
+  color: white;
+}
+
+.dark-mode .task > span {
+  color: white;
+}
+
+/* Search */
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  height: 35px;
+  width: 300px;
+  margin-right: 20px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid var(--purple);
+}
+
+input[type="submit"] {
+  background-color: var(--purple);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.85;
+}
+
+form p {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--purple);
+  margin-top: 5px;
+}
+
+/* Search on dark mode */
+
+.dark-mode input[type="text"] {
+  background-color: var(--dark-grey);
+  border: 1px solid white;
+  color: white;
+}
+
+.dark-mode ::placeholder,
+.dark-mode:-ms-input-placeholder,
+.dark-mode::-ms-input-placeholder {
+  color: white;
+  opacity: 0.9;
+}
+
+/* ----------------- */
+/* Footer */
+/* ----------------- */
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 1px var(--purple);
+}
+
+footer img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+footer a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--purple);
+}
+
+/* Footer on dark Mode */
+
+.dark-mode footer {
+  border-top: solid 1px white;
+}
+
+.dark-mode footer p {
+  color: white;
+}
