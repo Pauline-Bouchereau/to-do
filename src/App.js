@@ -19,8 +19,8 @@ library.add(faListAlt, faTrashAlt);
 function App() {
   //Declaration of states
   const [darkMode, setDarkMode] = useState(false);
-  const [search, setSearch] = useState("");
-  const [task, setTask] = useState(["task1", "task2"]);
+  const [search, setSearch] = useState("Task example, now create your own !");
+  const [task, setTask] = useState([]);
   const [isValid, setIsValid] = useState([]);
 
   return (
