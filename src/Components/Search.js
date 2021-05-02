@@ -1,12 +1,10 @@
-const Search = ({ task, setTask, search, setSearch, isValid }) => {
+const Search = ({ task, setTask, search, setSearch }) => {
   // Declaration functions used in the return
   const handleOnSubmit = (event) => {
     event.preventDefault();
     const newTaskTab = [...task];
-    newTaskTab.push(search);
+    newTaskTab.push({ name: search, isValid: true });
     setTask(newTaskTab);
-    const newIsValid = [...isValid];
-    newIsValid.push(false);
     setSearch("");
   };
 

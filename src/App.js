@@ -20,8 +20,10 @@ function App() {
   //Declaration of states
   const [darkMode, setDarkMode] = useState(false);
   const [search, setSearch] = useState("");
-  const [task, setTask] = useState(["Task example, now create your own !"]);
-  const [isValid, setIsValid] = useState([]);
+  const [task, setTask] = useState([
+    { name: "Task example, now create your own !", isValid: true },
+  ]);
+  // const [isValid, setIsValid] = useState([]);
 
   return (
     <div className={darkMode && "dark-mode"}>
@@ -34,8 +36,8 @@ function App() {
               <Task
                 index={index}
                 elem={elem}
-                isValid={isValid}
-                setIsValid={setIsValid}
+                // isValid={isValid}
+                // setIsValid={setIsValid}
                 task={task}
                 setTask={setTask}
               />
@@ -47,7 +49,7 @@ function App() {
           setTask={setTask}
           search={search}
           setSearch={setSearch}
-          isValid={isValid}
+          // isValid={isValid}
         />
       </main>
       <Footer />
