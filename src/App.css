@@ -163,6 +163,11 @@ form {
   margin-top: 20px;
 }
 
+form > div {
+  display: flex;
+  align-items: center;
+}
+
 input[type="text"] {
   height: 35px;
   width: 300px;
@@ -170,6 +175,7 @@ input[type="text"] {
   padding: 5px 10px;
   font-family: inherit;
   font-size: 18px;
+  border: 1px solid var(--purple);
 }
 
 input[type="text"]:focus {
@@ -234,6 +240,7 @@ footer a {
   cursor: pointer;
   color: inherit;
   font-weight: bold;
+  font-size: 18px;
 }
 
 footer a:hover {
@@ -248,4 +255,180 @@ footer a:hover {
 
 .dark-mode footer p {
   color: white;
+}
+
+/* ----------------------------------------------------- */
+/* Media Queries */
+/* ----------------------------------------------------- */
+
+/* ----------------- */
+/* max  992px*/
+/* ----------------- */
+
+@media (max-width: 992px) {
+  /* Header */
+  header {
+    height: 70px;
+    padding: 0 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .list-icon {
+    font-size: 50px;
+    margin-right: 30px;
+  }
+
+  header button {
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+  }
+  /* Main */
+  main {
+    min-height: calc(100vh - 140px);
+  }
+
+  /* Task */
+  .two-columns .task {
+    width: 320px;
+  }
+
+  .two-columns p {
+    font-size: 16px;
+    width: 260px;
+  }
+
+  .two-columns .task:nth-child(odd) {
+    margin-right: 15px;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 70px;
+  }
+
+  footer img {
+    width: 35px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 16px;
+  }
+}
+
+/* ----------------- */
+/* max  768px*/
+/* ----------------- */
+
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .list-icon {
+    font-size: 45px;
+    margin-right: 20px;
+  }
+
+  header button {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  /* Main */
+  main {
+    min-height: calc(100vh - 120px);
+  }
+
+  /* Task */
+  .two-columns .task:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  /* Footer */
+  footer {
+    height: 60px;
+  }
+
+  footer img {
+    width: 30px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 14px;
+  }
+}
+
+/* ----------------- */
+/* max  414px*/
+/* ----------------- */
+@media (max-width: 414px) {
+  /* Header */
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .list-icon {
+    font-size: 35px;
+    margin-right: 10px;
+  }
+
+  header button {
+    width: 110px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  /* Main */
+  main {
+    min-height: calc(100vh - 120px);
+  }
+
+  /* Search */
+
+  form {
+    margin-top: 10px;
+  }
+
+  input[type="text"] {
+    height: 30px;
+    width: 250px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+
+  input[type="submit"] {
+    height: 30px;
+    width: 90px;
+  }
+
+  form p {
+    font-size: 12px;
+  }
+
+  /* Footer */
+
+  footer img {
+    width: 20px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 12px;
+  }
 }

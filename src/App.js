@@ -23,7 +23,6 @@ function App() {
   const [task, setTask] = useState([
     { name: "Task example, now create your own !", isValid: true },
   ]);
-  // const [isValid, setIsValid] = useState([]);
 
   return (
     <div className={darkMode && "dark-mode"}>
@@ -33,14 +32,7 @@ function App() {
         <div className={task.length > 7 && "two-columns"}>
           {task.map((elem, index) => {
             return (
-              <Task
-                index={index}
-                elem={elem}
-                // isValid={isValid}
-                // setIsValid={setIsValid}
-                task={task}
-                setTask={setTask}
-              />
+              <Task index={index} elem={elem} task={task} setTask={setTask} />
             );
           })}
         </div>
@@ -49,7 +41,6 @@ function App() {
           setTask={setTask}
           search={search}
           setSearch={setSearch}
-          // isValid={isValid}
         />
       </main>
       <Footer />

@@ -1,9 +1,11 @@
 const Search = ({ task, setTask, search, setSearch }) => {
-  // Declaration functions used in the return
+  // When click on add task, new task added with the value of what is written in the input
   const handleOnSubmit = (event) => {
     event.preventDefault();
     const newTaskTab = [...task];
-    newTaskTab.push({ name: search, isValid: true });
+    // Add task with the 1st letter uppercase
+    const taskName = search.charAt(0).toUpperCase() + search.slice(1);
+    newTaskTab.push({ name: taskName, isValid: true });
     setTask(newTaskTab);
     setSearch("");
   };
@@ -14,19 +16,20 @@ const Search = ({ task, setTask, search, setSearch }) => {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <input
-        type="text"
-        placeholder="New task"
-        value={search}
-        onChange={handleOnChange}
-      />
-      <input
-        type="submit"
-        value="Add task"
-        disabled={!search || task.length >= 14}
-        className={(!search || task.length >= 14) && "disabled"}
-      />
-
+      <div>
+        <input
+          type="text"
+          placeholder="New task"
+          value={search}
+          onChange={handleOnChange}
+        />
+        <input
+          type="submit"
+          value="Add task"
+          disabled={!search || task.length >= 14}
+          className={(!search || task.length >= 14) && "disabled"}
+        />
+      </div>
       {task.length >= 14 && (
         <p>Sorry, you've reached the maximum number of tasks !</p>
       )}

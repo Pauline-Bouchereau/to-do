@@ -6,17 +6,11 @@ const Task = ({ index, elem, task, setTask }) => {
   const handleOnClickCheckBox = () => {
     const newTaskTab = [...task];
     const indexTask = newTaskTab.indexOf(elem);
-    if (
-      newTaskTab[index].name === elem.name &&
-      newTaskTab[index].isValid === true
-    ) {
+    if (newTaskTab[index].isValid === true) {
       newTaskTab.splice(indexTask, 1);
       elem.isValid = false;
       newTaskTab.push(elem);
-    } else if (
-      newTaskTab[index].name === elem.name &&
-      newTaskTab[index].isValid === false
-    ) {
+    } else if (newTaskTab[index].isValid === false) {
       newTaskTab.splice(indexTask, 1);
       elem.isValid = true;
       newTaskTab.unshift(elem);
@@ -35,10 +29,12 @@ const Task = ({ index, elem, task, setTask }) => {
   return (
     <div className="task" key={index}>
       <div>
-        <input type="checkbox" onClick={handleOnClickCheckBox} />
-        <p className={task[index].isValid === false && "crossed"}>
-          {elem.name}
-        </p>
+        <input
+          type="checkbox"
+          onClick={handleOnClickCheckBox}
+          checked={task[index].isValid ? false : true}
+        />
+        <p className={!task[index].isValid && "crossed"}>{elem.name}</p>
       </div>
       <span onClick={handleOnClickTrash}>
         <FontAwesomeIcon icon="trash-alt" />
