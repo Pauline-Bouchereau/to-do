@@ -5,7 +5,7 @@ const Search = ({ task, setTask, search, setSearch }) => {
     const newTaskTab = [...task];
     // Add task with the 1st letter uppercase
     const taskName = search.charAt(0).toUpperCase() + search.slice(1);
-    newTaskTab.push({ name: taskName, isValid: true });
+    newTaskTab.push({ name: taskName, isValid: true, isImportant: false });
     setTask(newTaskTab);
     setSearch("");
   };
@@ -27,7 +27,7 @@ const Search = ({ task, setTask, search, setSearch }) => {
           type="submit"
           value="Add task"
           disabled={!search || task.length >= 14}
-          className={(!search || task.length >= 14) && "disabled"}
+          className={!search || task.length >= 14 ? "disabled" : ""}
         />
       </div>
       {task.length >= 14 && (

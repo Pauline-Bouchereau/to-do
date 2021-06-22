@@ -1,4 +1,4 @@
-import pictopb from "../assets/img/picto-pb-dark.jpg";
+import pictopb from "../assets/img/picto-pb.png";
 
 const Footer = () => {
   return (
