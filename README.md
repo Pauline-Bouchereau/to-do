@@ -4,9 +4,9 @@
 
 **Frontend project**
 
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/80970440/122936406-6c7f9d80-d371-11eb-84cc-eea99e1fb5bb.gif)
-
 👉 Netlify Link to see the live version [HERE](https://to-do-pb.netlify.app/)
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/80970440/122936406-6c7f9d80-d371-11eb-84cc-eea99e1fb5bb.gif)
 
 _Made in 2021 @ Le Reacteur_
 
