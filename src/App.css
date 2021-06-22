@@ -193,7 +193,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border: 2px solid var(--green);
+  outline: 2px solid var(--green);
 }
 
 input[type="submit"] {
