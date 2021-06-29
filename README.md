@@ -40,7 +40,7 @@ cd to-do
 #### Install packages :
 
 ```javascript
-yarn;
+yarn
 ```
 
 #### When installation is complete :
