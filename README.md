@@ -23,9 +23,9 @@ Add a task || Set a task as important, done or remove it || Save To Do List in L
 
 ### 🪛 Packages
 
-✔️ "@fortawesome/fontawesome-svg-core": "^1.2.35"  
-✔️ "@fortawesome/free-solid-svg-icons": "^5.15.3"  
-✔️ "@fortawesome/react-fontawesome": "^0.1.14"  
+✔️ @fortawesome/fontawesome-svg-core
+✔️ @fortawesome/free-solid-svg-icons 
+✔️ @fortawesome/react-fontawesome 
 ✔️ Material UI
 
 ### 🚀 Running the project
